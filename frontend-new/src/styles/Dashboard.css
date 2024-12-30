@@ -1,0 +1,347 @@
+.dashboard-container {
+    padding: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+}
+
+.security-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.security-header h1 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.security-header i {
+    color: #6DB33F;
+    margin-right: 0.5rem;
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    flex: 1;
+}
+
+.scenario-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.scenario-header {
+    background: #6DB33F;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.scenario-header h3 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cases-list {
+    padding: 0.5rem;
+}
+
+.case-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.case-item:hover {
+    background: #f8f9fa;
+}
+
+.case-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.case-icon i {
+    font-size: 0.7rem;
+    color: #6DB33F;
+}
+
+.case-content {
+    flex: 1;
+}
+
+.case-content h4 {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #2c3e50;
+}
+
+.handler-chain {
+    font-size: 0.65rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.handler-chain span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.handler-chain i {
+    font-size: 0.5rem;
+    margin: 0 0.25rem;
+    color: #6DB33F;
+}
+
+.security-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.stat-item i {
+    color: #6DB33F;
+    margin-bottom: 0.25rem;
+}
+
+.stat-item span {
+    color: #666;
+}
+
+.stat-item strong {
+    color: #2c3e50;
+    font-size: 0.65rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.case-item.active {
+    animation: pulse 1s infinite;
+}
+
+.realtime-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.auth-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-form {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.auth-form h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 0.5rem;
+    background: #6DB33F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.process-log {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.process-log h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.log-container {
+    height: 400px;
+    overflow-y: auto;
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+}
+
+.log-item {
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0.8rem;
+    align-items: start;
+    border-left: 3px solid transparent;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s ease forwards;
+}
+
+.log-item.process {
+    background: rgba(255, 243, 205, 0.1);
+    border-left-color: #ffc107;
+    color: #ffd;
+    animation-duration: 0.6s;
+}
+
+.log-item.success {
+    background: rgba(212, 237, 218, 0.1);
+    border-left-color: #28a745;
+    color: #dfd;
+    animation-duration: 0.8s;
+}
+
+.log-item.error {
+    background: rgba(248, 215, 218, 0.1);
+    border-left-color: #dc3545;
+    color: #fdd;
+    animation-duration: 1s;
+}
+
+.log-item.info {
+    background: rgba(209, 236, 241, 0.1);
+    border-left-color: #17a2b8;
+    color: #ddf;
+    animation-duration: 0.7s;
+}
+
+.log-time {
+    color: #666;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.log-step {
+    font-weight: bold;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.log-message {
+    color: inherit;
+    word-break: break-all;
+    white-space: pre-wrap;
+    font-family: 'Consolas', monospace;
+}
+
+.log-item.isNew {
+    animation: newLogSlideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes newLogSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+.log-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.log-container::-webkit-scrollbar-track {
+    background: #2c3e50;
+    border-radius: 5px;
+}
+
+.log-container::-webkit-scrollbar-thumb {
+    background: #6DB33F;
+    border-radius: 5px;
+    border: 2px solid #2c3e50;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+    background: #5a9a35;
+}
+
+.log-item.new {
+    animation: highlightNew 1s ease-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(-5px);
+    }
+    100% {
+        background: transparent;
+        transform: translateX(0);
+    }
+} 

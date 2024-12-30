@@ -1,0 +1,15 @@
+<!--<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">-->
+<!--    &lt;!&ndash; 방패 모양 배경 &ndash;&gt;-->
+<!--    <path d="M16 2L4 7v9c0 5.55 3.84 10.74 9 12.5 5.16-1.76 9-6.95 9-12.5V7l-6-2.5z" -->
+<!--          fill="#6db33f" stroke="#4a901e" stroke-width="1"/>-->
+<!--    -->
+<!--    &lt;!&ndash; 스프링 로고 'S' &ndash;&gt;-->
+<!--    <path d="M20.5 12.5c0 2.5-2.5 3.5-4.5 3.5s-4.5-1-4.5-3.5S14 9 16 9s4.5 1 4.5 3.5z" -->
+<!--          fill="white" stroke="#4a901e" stroke-width="0.5"/>-->
+<!--    -->
+<!--    &lt;!&ndash; 자물쇠 아이콘 &ndash;&gt;-->
+<!--    <rect x="13" y="17" width="6" height="5" rx="1" -->
+<!--          fill="white" stroke="#4a901e" stroke-width="0.5"/>-->
+<!--    <path d="M14 17v-2c0-1.1.9-2 2-2s2 .9 2 2v2" -->
+<!--          fill="none" stroke="#4a901e" stroke-width="1"/>-->
+<!--</svg>-->
